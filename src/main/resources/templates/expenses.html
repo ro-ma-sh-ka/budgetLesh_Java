@@ -12,6 +12,12 @@ pom.xml <artifactId>spring-boot-starter-thymeleaf</artifactId> in dependencies--
 
 <div class="container mt-5">
   <h1>Expenses</h1>
+  <div th:each="el : ${budget}" class="alert alert-info mt-2">
+    <h3 th:text="${el.what_is}"></h3>
+    <h3 th:text="${el.total}"></h3>
+    <h3 th:text="${el.currency}"></h3>
+    <h3 th:text="${el.date}"></h3>
+  </div>
 </div>
 
 
