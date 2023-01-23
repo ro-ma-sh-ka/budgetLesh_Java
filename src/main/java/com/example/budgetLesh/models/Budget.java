@@ -71,4 +71,17 @@ public class Budget {
     public void setDate(Date date) {
         this.date = date;
     }
+
+
+    // in any models must be constructor without any parameters!!
+    public Budget() {
+    }
+
+    public Budget(Date date, String what_is, String section, Float total, String currency) {
+        this.date = date;
+        this.what_is = what_is;
+        this.section = section;
+        this.total = total;
+        this.currency = currency;
+    }
 }
