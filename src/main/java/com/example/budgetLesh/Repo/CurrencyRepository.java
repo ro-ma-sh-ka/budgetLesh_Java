@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 // extends all functions from CrudRepository (Create, Read, Update< Delete),
 // connect do Currency model and notice id is Long
-public interface currencyRepository extends CrudRepository<Currency, Long>{
+public interface CurrencyRepository extends CrudRepository <Currency, Long> {
 }
