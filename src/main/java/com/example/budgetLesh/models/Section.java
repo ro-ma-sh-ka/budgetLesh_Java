@@ -28,4 +28,13 @@ public class Section {
     public void setSection(String section) {
         this.section = section;
     }
+
+    // must define constructor without parameters
+    public Section() {
+    }
+
+    public Section(String section) {
+        this.section = section;
+    }
+
 }

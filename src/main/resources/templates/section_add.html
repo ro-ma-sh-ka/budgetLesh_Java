@@ -10,17 +10,13 @@ pom.xml <artifactId>spring-boot-starter-thymeleaf</artifactId> in dependencies--
 <body>
 <header th:insert="blocks/header :: header"></header>
 
-<div class="container mt-5">
-    <h1>Sections</h1>
-    <div th:each="section : ${sections}" class="alert alert-info mt-2">
-        <h3 th:text="${section.section}"/>
-        <a th:href="'/section_edit/' + ${section.id}" class="btn btn-warning">Edit</a><br>
-        <form th:action="'section_delete/' + ${section.id}" method="post">
-            <button class="btn btn-warning" type="submit">Delete</button>
-        </form>
-    </div>
+<div class="container mt-5 mb-5">
+    <h1>Add section</h1>
+    <form action="/sections/add" method="post">
+        <input type="text" name="section" placeholder="section" class="form-control">
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
 </div>
-
 
 <div th:insert="/blocks/footer :: footer"></div>
 

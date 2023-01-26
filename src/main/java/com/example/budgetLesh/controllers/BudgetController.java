@@ -23,6 +23,7 @@ public class BudgetController {
 
         // create an iterable object with all data from repository
         Iterable<Budget> budget = budgetRepository.findAll();
+        // send the object to a template as the variable "budget"
         model.addAttribute("budget", budget);
         return ("expenses");
     }
@@ -41,13 +42,8 @@ public class BudgetController {
                              @RequestParam Float total,
                              @RequestParam String currency,
                              Model model) {
-        Budget expense = new Budget(date, what_is, section, total, currency);
-        budgetRepository.save(expense);
+        Budget new_expense = new Budget(date, what_is, section, total, currency);
+        budgetRepository.save(new_expense);
         return("redirect:/expenses");
-    }
-
-    @GetMapping("/sections")
-    public String sectionsMain(Model model) {
-        return ("sections");
     }
 }

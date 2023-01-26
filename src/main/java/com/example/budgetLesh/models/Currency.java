@@ -37,6 +37,7 @@ public class Currency {
         this.country = country;
     }
 
+    // must define constructor without parameters
     public Currency() {
     }
 
