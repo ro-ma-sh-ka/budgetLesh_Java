@@ -15,6 +15,8 @@ import java.util.Optional;
 
 @Controller
 public class CurrencyController {
+
+    // annotation to link variable currencyRepository which connect to repository CurrencyRepository
     @Autowired
     private CurrencyRepository currencyRepository;
 
